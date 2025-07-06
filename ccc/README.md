@@ -32,8 +32,9 @@ npm install -g .
 
 ## Prerequisites
 
-- Node.js 18+
+- Node.js (with npm) - version 18 or higher
 - [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) installed and authenticated
+- Active Claude Code subscription (uses your existing Claude Code account)
 
 ## Usage
 
