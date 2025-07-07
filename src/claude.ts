@@ -45,6 +45,8 @@ Only respond with the command itself, no explanation or additional text.
 Do not include markdown formatting or code blocks.
 Use ${osName}-specific commands and utilities.
 
+CRITICAL: DO NOT use any filesystem exploration tools (LS, Glob, Grep, Read). Just provide the command directly without exploring the filesystem.
+
 System: ${osName} ${release()}`;
   } else {
     prompt = `You are a command line expert for ${osName} systems. Generate a single command line command for the following request. 
@@ -57,6 +59,8 @@ IMPORTANT: Use ${osName}-specific commands and utilities. For example:
 - On macOS: use top -o mem for process sorting by memory
 - On Linux: use free -h for memory
 - On Windows: use tasklist for processes
+
+CRITICAL: DO NOT use any filesystem exploration tools (LS, Glob, Grep, Read). Just provide the command directly without exploring the filesystem.
 
 System: ${osName} ${release()}
 
