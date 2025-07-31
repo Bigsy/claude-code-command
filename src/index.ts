@@ -14,7 +14,7 @@ program
   .description('Claude Code Command - Natural language to CLI commands')
   .version('1.0.0')
   .argument('<request...>', 'Natural language request for command')
-  .option('-m, --model <model>', 'Claude model to use (opus, sonnet)', 'sonnet')
+  .option('-m, --model <model>', 'Claude model to use (opus, sonnet, haiku)', 'haiku')
   .action(async (requestParts: string[], options) => {
     let request = requestParts.join(' ');
     let previousCommand: string | undefined;

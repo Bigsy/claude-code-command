@@ -19,7 +19,7 @@ async function getContextInfo(): Promise<string> {
   });
 }
 
-export async function generateCommand(request: string, previousCommand?: string, model: string = 'sonnet'): Promise<string | null> {
+export async function generateCommand(request: string, previousCommand?: string, model: string = 'haiku'): Promise<string | null> {
 
   // Get OS information
   const osInfo = `${platform()} ${release()}`;
