@@ -6,13 +6,17 @@ import { generateCommand } from './claude.js';
 import { showMenu, getRefinedRequest } from './menu.js';
 import { executeCommand } from './execute.js';
 import { copyToClipboard } from './clipboard.js';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
+const packageJson = require('../package.json');
 
 const program = new Command();
 
 program
   .name('ccc')
   .description('Claude Code Command - Natural language to CLI commands')
-  .version('1.0.0')
+  .version(packageJson.version)
   .argument('<request...>', 'Natural language request for command')
   .option('-m, --model <model>', 'Claude model to use (opus, sonnet, haiku)', 'haiku')
   .action(async (requestParts: string[], options) => {
